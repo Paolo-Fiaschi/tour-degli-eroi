@@ -1,0 +1,6 @@
+<h2>Dettagli di {{eroe.nome | uppercase}}</h2>
+<div><span>Id: </span>{{eroe.id}}</div>
+<div><span>Nome: </span>{{eroe.nome}}</div>
+<label for="nome">
+  <input type="text" id="nome" [(ngModel)]="eroe.nome">
+</label>
