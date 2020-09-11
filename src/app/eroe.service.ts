@@ -15,5 +15,11 @@ export class EroeService {
    return of(fintiEroi);
   }
 
+  getEroe(id: number): Observable<Eroe> {
+    this.notifiche.aggiungiNotifica('Eroi Aggiunto:' + id);
+    const eroeTrovato = fintiEroi.find(eroe => eroe.id === id)
+   return of(eroeTrovato);
+  }
+
   constructor(private notifiche: NotificheService) { }
 }
